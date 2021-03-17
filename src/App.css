@@ -1,0 +1,14 @@
+
+
+/* General Info */ 
+
+#generalInfoContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.inputFirstName{
+
+}
