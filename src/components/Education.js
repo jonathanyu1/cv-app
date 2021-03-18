@@ -40,6 +40,24 @@ class Education extends Component{
         })
     }
 
+    clearForm = () => {
+        console.log(this.state.section.id);
+        this.setState(prevState =>({
+            section: {...prevState.section,
+                school: '',
+                fromDate: '',
+                toDate: '',
+                degree: '',
+            }
+          }));
+    }
+
+    cancelForm = () => {
+        // reset form inputs, hide form, unhide new button
+        this.clearForm();
+        this.toggleForm();
+    }
+
     newEducation = (e) =>{
         console.log(e);
         console.log(this);
