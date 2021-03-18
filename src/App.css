@@ -1,4 +1,7 @@
 
+.hide{
+    display: none;
+}
 /* whole CV container */
 #cvContainer{
     width: 80%;
@@ -33,7 +36,7 @@
 
 /* Education Form */
 
-#educationForm{
+.educationForm{
     display: flex;
     flex-direction: column;
 

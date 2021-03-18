@@ -32,7 +32,7 @@ const GeneralInfo = () =>{
                     />
                 </div>
                 <div className='generalInfoContainer'>
-                    <span class="material-icons">location_on</span>
+                    <span className="material-icons">location_on</span>
                     <EditableLabel text='Location'
                         labelClassName = 'labelLocation'
                         inputClassName = 'inputLocation'
