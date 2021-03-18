@@ -159,7 +159,7 @@ class Education extends Component{
             </form>
             <button 
                 id='btnNewEducation' 
-                onClick={this.newEducation}
+                onClick={this.toggleForm}
                 className={this.state.btnIsHidden ? 'hide':'btnNewEducation'}
                 > 
                 <span className='material-icons'>add_circle_outline</span>
