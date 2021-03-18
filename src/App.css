@@ -34,6 +34,15 @@
 
 /* Education */
 
+.sectionContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionRight{
+    text-align: right;
+}
+
 /* Education Form */
 
 .educationForm{

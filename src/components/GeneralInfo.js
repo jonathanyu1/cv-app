@@ -18,14 +18,14 @@ const GeneralInfo = () =>{
             </div>
             <div id='generalInfoRight'>
                 <div className='generalInfoContainer'>
-                    <span class="material-icons">call</span>
+                    <span className="material-icons">call</span>
                     <EditableLabel text='Phone'
                         labelClassName = 'labelPhone'
                         inputClassName = 'inputPhone'
                     />
                 </div>
                 <div className='generalInfoContainer'>
-                    <span class="material-icons">mail</span>
+                    <span className="material-icons">mail</span>
                     <EditableLabel text='Email'
                         labelClassName = 'labelEmail'
                         inputClassName = 'inputEmail'

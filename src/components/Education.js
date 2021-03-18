@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import uniqid from 'uniqid';
+import NewSection from './NewSection';
 
 class Education extends Component{
     constructor(){
         super();
-    
+
         this.newEducation = this.newEducation.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.deleteSection = this.deleteSection.bind(this);
 
         this.state = {
             section: {
@@ -16,7 +18,7 @@ class Education extends Component{
                 degree: '',
                 id: uniqid(),
             },
-            list: [],
+            sectionList: [],
             formIsHidden: true,
             btnIsHidden: false,
         };
@@ -48,6 +50,7 @@ class Education extends Component{
                 fromDate: '',
                 toDate: '',
                 degree: '',
+                id: uniqid(),
             }
           }));
     }
@@ -64,12 +67,33 @@ class Education extends Component{
         // give form visible, hide btnNewEducation
         this.toggleForm();
     }  
+
+    onSubmitForm = (e) =>{
+        e.preventDefault();
+        this.setState({
+            sectionList: this.state.sectionList.concat(this.state.section)
+            // sectionList: [...prevState.sectionList, this.state.section]
+        });
+        this.clearForm();
+        this.toggleForm();
+    }
+
+    deleteSection = (id) => {
+        console.log(id);
+        // https://stackoverflow.com/a/48598110
+        this.setState((prevState)=>({
+            sectionList: prevState.sectionList.filter(section=>section.id!==id),
+        }))
+    }
     
     render() {
+        const { sectionList } = this.state;
+
         return (
         <div id='educationContainer'>
             <div id='educationHeader'>Education</div>
-            <form id='educationForm' className={this.state.formIsHidden ? 'hide':'educationForm'}>
+            <NewSection sectionList={sectionList} deleteSection={this.deleteSection}/>
+            <form id='educationForm' onSubmit={this.onSubmitForm} className={this.state.formIsHidden ? 'hide':'educationForm'}>
                 {/* school */}
                 <div className='eduFormDetail'>
                     <label htmlFor='schoolInput'>Name of University/College: </label>
@@ -129,7 +153,7 @@ class Education extends Component{
                         onClick={this.cancelForm}
                         className='btnForm'
                     > 
-                        <span class="material-icons">clear</span>
+                        <span className="material-icons">clear</span>
                     Cancel</button>
                 </div>
             </form>
