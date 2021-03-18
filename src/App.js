@@ -42,14 +42,16 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div id='entireContainer'>
         <div id='header'>
           <button id='btnMode' onClick={this.changeMode}>{this.state.otherMode}</button>
         </div>
-        <GeneralInfo />
-        {/* <Education />
-        <Experience />
-        <Skills /> */}
+        <div id='cvContainer'>
+          <GeneralInfo />
+          <Education />
+          {/* <Experience />
+          <Skills /> */}
+        </div>
       </div>
     )
   }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import EditableLabel from 'react-inline-editing';
 
 const GeneralInfo = () =>{
+
     return (
         <div id='generalInfoContainer'>
             <div id='generalInfoLeft'>
@@ -16,18 +17,28 @@ const GeneralInfo = () =>{
 
             </div>
             <div id='generalInfoRight'>
-                <EditableLabel text='Phone'
-                    labelClassName = 'labelPhone'
-                    inputClassName = 'inputPhone'
-                />
-                <EditableLabel text='Email'
-                    labelClassName = 'labelEmail'
-                    inputClassName = 'inputEmail'
-                />
-                <EditableLabel text='Location'
-                    labelClassName = 'labelLocation'
-                    inputClassName = 'inputLocation'
-                />
+                <div className='generalInfoContainer'>
+                    <span class="material-icons">call</span>
+                    <EditableLabel text='Phone'
+                        labelClassName = 'labelPhone'
+                        inputClassName = 'inputPhone'
+                    />
+                </div>
+                <div className='generalInfoContainer'>
+                    <span class="material-icons">mail</span>
+                    <EditableLabel text='Email'
+                        labelClassName = 'labelEmail'
+                        inputClassName = 'inputEmail'
+                    />
+                </div>
+                <div className='generalInfoContainer'>
+                    <span class="material-icons">location_on</span>
+                    <EditableLabel text='Location'
+                        labelClassName = 'labelLocation'
+                        inputClassName = 'inputLocation'
+                    />
+                </div>
+                
             </div>
 
         </div>

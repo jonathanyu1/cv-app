@@ -1,4 +1,9 @@
 
+/* whole CV container */
+#cvContainer{
+    width: 80%;
+    margin: 0 auto;
+}
 
 /* General Info */ 
 
@@ -6,9 +11,30 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    width: 80%;
+    
 }
 
+#generalInfoRight{
+    /* text-align: right; */
+}
+
+.generalInfoContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/* need to prevent input labels from stretching out*/
 .inputFirstName{
+
+}
+
+
+/* Education */
+
+/* Education Form */
+
+#educationForm{
+    display: flex;
+    flex-direction: column;
 
 }
