@@ -19,7 +19,7 @@ body{
 
 /* whole CV container */
 #cvContainer{
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     background-color: white;
     border: outset;
@@ -68,12 +68,30 @@ body{
 
 #generalInfoLeft{
     font-size: 50px;
+    font-weight: 600;
 }
 
+#generalInfoLeft input{
+    font-size: 50px;
+    max-width: 300px;
+}
+
+#generalInfoLeft label{
+    /* prevents empty input from making label unclickable */
+    min-width: 200px;
+    display: inline-block;
+    min-height: 50px;
+}
 
 #generalInfoRight{
     /* text-align: right; */
     font-size: 20px;
+}
+
+#generalInfoRight label{
+    min-width: 50px;
+    display: inline-block;
+    min-height: 20px;
 }
 
 #generalInfoRight span{

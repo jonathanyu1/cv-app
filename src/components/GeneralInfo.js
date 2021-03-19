@@ -9,6 +9,7 @@ const GeneralInfo = () =>{
                 <EditableLabel text='First Name' 
                     labelClassName = 'labelFirstName'
                     inputClassName = 'inputFirstName'
+                    inputPlaceHolder = 'First Name'
                 />
                 <EditableLabel text='Last Name'
                     labelClassName = 'labelLastName'
