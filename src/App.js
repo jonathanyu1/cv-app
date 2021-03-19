@@ -50,7 +50,7 @@ class App extends Component {
           <GeneralInfo />
           <Education />
           <Experience />
-          {/* <Skills /> */}
+          <Skills />
         </div>
       </div>
     )
