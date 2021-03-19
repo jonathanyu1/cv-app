@@ -6,7 +6,7 @@ class Education extends Component{
     constructor(){
         super();
 
-        this.newEducation = this.newEducation.bind(this);
+        // this.newEducation = this.newEducation.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.deleteSection = this.deleteSection.bind(this);
 
@@ -61,12 +61,12 @@ class Education extends Component{
         this.toggleForm();
     }
 
-    newEducation = (e) =>{
-        console.log(e);
-        console.log(this);
-        // give form visible, hide btnNewEducation
-        this.toggleForm();
-    }  
+    // newEducation = (e) =>{
+    //     console.log(e);
+    //     console.log(this);
+    //     // give form visible, hide btnNewEducation
+    //     this.toggleForm();
+    // }  
 
     onSubmitForm = (e) =>{
         e.preventDefault();

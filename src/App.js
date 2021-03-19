@@ -49,8 +49,8 @@ class App extends Component {
         <div id='cvContainer'>
           <GeneralInfo />
           <Education />
-          {/* <Experience />
-          <Skills /> */}
+          <Experience />
+          {/* <Skills /> */}
         </div>
       </div>
     )
