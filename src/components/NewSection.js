@@ -16,11 +16,6 @@ const NewSection = (props) =>{
                         </div>
                         <div className='sectionRight'>
                             <div className='sectionDate'>{section.fromDate} - {section.toDate}</div>
-                            {/* <div className='sectionFromDate'>{section.fromDate}</div>
-                            <div className='sectionToDate'>{section.toDate}</div> */}
-                            {/* <button className='btnDeleteSection' onClick={()=> props.deleteSection(section.id)}>
-                                <span className="material-icons">clear</span>
-                            </button> */}
                             <button className={isEdit ? 'btnDeleteSection' : 'hideVisibility'} onClick={()=> props.deleteSection(section.id)}>
                                 <span className="material-icons">clear</span>
                             </button>

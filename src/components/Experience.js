@@ -87,9 +87,9 @@ class Experience extends Component{
         <div id='expContainer'>
             <div id='expHeader'>Experience</div>
             <NewSectionExp isEdit={isEdit} sectionList={sectionList} deleteSection={this.deleteSection}/>
-            <form id='expForm' onSubmit={this.onSubmitForm} className={this.state.formIsHidden ? 'hide':'expForm'}>
+            <form id='expForm' onSubmit={this.onSubmitForm} className={(this.state.formIsHidden || !isEdit) ? 'hide':'form'}>
                 {/* job */}
-                <div className='expFormDetail'>
+                <div className='formDetail'>
                     <label htmlFor='schoolInput'>Job Title: </label>
                     <input 
                         onChange={this.handleChange}
@@ -100,7 +100,7 @@ class Experience extends Component{
                     />
                 </div>
                 {/* date from */}
-                <div className='expFormDetail'>
+                <div className='formDetail'>
                     <label htmlFor='expFromDateInput'>From: </label>
                     <input 
                         onChange={this.handleChange}
@@ -111,7 +111,7 @@ class Experience extends Component{
                     />
                 </div>
                 {/* date to */}
-                <div className='expFormDetail'>
+                <div className='formDetail'>
                     <label htmlFor='expToDateInput'>To: </label>
                     <input 
                         onChange={this.handleChange}
@@ -122,7 +122,7 @@ class Experience extends Component{
                     />
                 </div>
                 {/* company */}
-                <div className='expFormDetail'>
+                <div className='formDetail'>
                     <label htmlFor='companyInput'>Company: </label>
                     <input
                         onChange={this.handleChange}
@@ -133,7 +133,7 @@ class Experience extends Component{
                     />
                 </div>
                 {/* description */}
-                <div className='expFormDetail'>
+                <div className='formDetail'>
                     <label htmlFor='expDescription'>Description: </label>
                     <textarea
                         onChange={this.handleChange}
@@ -167,7 +167,7 @@ class Experience extends Component{
             <button 
                 id='btnNewExp' 
                 onClick={this.toggleForm}
-                className={this.state.btnIsHidden ? 'hide':'btnNewSection'}
+                className={(this.state.btnIsHidden || !isEdit) ? 'hide':'btnNewSection'}
                 > 
                 <span className='material-icons'>add_circle_outline</span>
             New</button>

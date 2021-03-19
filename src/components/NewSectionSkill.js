@@ -12,7 +12,7 @@ const NewSectionSkill = (props) =>{
                         {/* <button className='btnDeleteSkill' onClick={()=> props.deleteSection(skill.id)}>
                             <span className="material-icons">clear</span>
                         </button> */}
-                        <button className={isEdit ? 'btnDeleteSkill':'hideVisibility'} onClick={()=> props.deleteSection(skill.id)}>
+                        <button className={isEdit ? 'btnDeleteSection':'hideVisibility'} onClick={()=> props.deleteSection(skill.id)}>
                             <span className="material-icons">clear</span>
                         </button>
                     </div>

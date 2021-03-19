@@ -77,9 +77,9 @@ class Skills extends Component{
         <div id='skillsContainer'>
             <div id='skillsHeader'>Skills</div>
             <NewSectionSkill isEdit={isEdit} skillList={skillList} deleteSection={this.deleteSection}/>
-            <form id='skillForm' onSubmit={this.onSubmitForm} className={this.state.formIsHidden ? 'hide':'skillForm'}>
+            <form id='skillForm' onSubmit={this.onSubmitForm} className={(this.state.formIsHidden || !isEdit) ? 'hide':'form'}>
                 {/* skill name */}
-                <div className='skillFormDetail'>
+                <div className='formDetail'>
                     <label htmlFor='skillNameInput'>Skill Name: </label>
                     <input 
                         onChange={this.handleChange}
@@ -111,7 +111,7 @@ class Skills extends Component{
             <button 
                 id='btnNewSkill' 
                 onClick={this.toggleForm}
-                className={this.state.btnIsHidden ? 'hide':'btnNewSection'}
+                className={(this.state.btnIsHidden || !isEdit) ? 'hide':'btnNewSection'}
                 > 
                 <span className='material-icons'>add_circle_outline</span>
             New</button>

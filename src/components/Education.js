@@ -94,10 +94,10 @@ class Education extends Component{
         <div id='educationContainer'>
             <div id='educationHeader'>Education</div>
             <NewSection sectionList={sectionList} deleteSection={this.deleteSection} isEdit={isEdit}/>
-            <form id='educationForm' onSubmit={this.onSubmitForm} className={this.state.formIsHidden ? 'hide':'educationForm'}>
+            <form id='educationForm' onSubmit={this.onSubmitForm} className={(this.state.formIsHidden || !isEdit) ? 'hide':'form'}>
                 {/* school */}
-                <div className='eduFormDetail'>
-                    <label htmlFor='schoolInput'>Name of University/College: </label>
+                <div className='formDetail'>
+                    <label htmlFor='schoolInput'>University/College: </label>
                     <input 
                         onChange={this.handleChange}
                         value={this.state.section.school}
@@ -107,7 +107,7 @@ class Education extends Component{
                     />
                 </div>
                 {/* date from */}
-                <div className='eduFormDetail'>
+                <div className='formDetail'>
                     <label htmlFor='fromDateInput'>From: </label>
                     <input 
                         onChange={this.handleChange}
@@ -118,7 +118,7 @@ class Education extends Component{
                     />
                 </div>
                 {/* date to */}
-                <div className='eduFormDetail'>
+                <div className='formDetail'>
                     <label htmlFor='toDateInput'>To: </label>
                     <input 
                         onChange={this.handleChange}
@@ -129,7 +129,7 @@ class Education extends Component{
                     />
                 </div>
                 {/* degree */}
-                <div className='eduFormDetail'>
+                <div className='formDetail'>
                     <label htmlFor='degreeInput'>Degree: </label>
                     <input
                         onChange={this.handleChange}
@@ -161,7 +161,7 @@ class Education extends Component{
             <button 
                 id='btnNewEducation' 
                 onClick={this.toggleForm}
-                className={this.state.btnIsHidden ? 'hide':'btnNewSection'}
+                className={(this.state.btnIsHidden || !isEdit) ? 'hide':'btnNewSection'}
                 > 
                 <span className='material-icons'>add_circle_outline</span>
             New</button>

@@ -54,7 +54,7 @@ body{
     border-radius: 5px;
     padding: 10px;
     width: 100px;
-
+    background-color: white;
 }
 
 
@@ -104,19 +104,23 @@ body{
     max-width: 100px;
 }
 
-.generalInfoContainer{
+.generalInfoRightDetails{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-/* need to prevent input labels from stretching out*/
-.inputFirstName{
-
-}
-
-
 
 /* Education */
+
+#educationContainer{
+    margin: 20px 20px;
+}
+
+#educationHeader{
+    border-bottom: 1px solid black;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
 .sectionContainer{
     display: flex;
@@ -127,15 +131,56 @@ body{
     text-align: right;
 }
 
-/* Education Form */
+#sectionListContainer{
+    font-size: 18px;
+}
 
-.educationForm{
+.sectionDescription{
+    margin-left: 15px;
+}
+
+/* Form */
+
+.form{
+    width: 40%;
+}
+
+.formDetail input, .formDetail textarea{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(180, 180, 180);
+}
+
+.formBtnContainer{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 20%;
+}
 
+/* Experience */
+
+#expContainer{
+    margin: 20px 20px;
+}
+
+#expHeader{
+    border-bottom: 1px solid black;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 /* Skills */
+
+#skillsContainer{
+    margin: 20px 20px;
+}
+
+#skillsHeader{
+    border-bottom: 1px solid black;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
 #skillListContainer{
     display: flex;
@@ -148,10 +193,30 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    background-color:#727477;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    margin-right: 5px;
 }
 
-/* Skill Form */ 
+.skillName{
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
 
+#sectionListContainer{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#skillListContainer{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+/* Skill Form */ 
 
 
 /* buttons form */ 
@@ -161,4 +226,15 @@ body{
 
 .btnNewSection{
     vertical-align: middle;
+    margin-top: 10px;
+}
+
+.btnDeleteSection{
+    border: none;
+    border-radius: 20px;
+    background-color:#727477;
+}
+
+.btnDeleteSection span{
+    font-size: 20px;
 }
