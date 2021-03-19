@@ -1,7 +1,7 @@
 import React from 'react'
 
 const NewSectionSkill = (props) =>{
-    const {skillList} = props;
+    const {skillList, isEdit} = props;
 
     return (
         <div id='skillListContainer'>
@@ -9,7 +9,10 @@ const NewSectionSkill = (props) =>{
                 return (
                     <div className='skillContainer' key={skill.id}>
                         <div className='skillName'>{skill.name}</div>
-                        <button className='btnDeleteSkill' onClick={()=> props.deleteSection(skill.id)}>
+                        {/* <button className='btnDeleteSkill' onClick={()=> props.deleteSection(skill.id)}>
+                            <span className="material-icons">clear</span>
+                        </button> */}
+                        <button className={isEdit ? 'btnDeleteSkill':'hideVisibility'} onClick={()=> props.deleteSection(skill.id)}>
                             <span className="material-icons">clear</span>
                         </button>
                     </div>

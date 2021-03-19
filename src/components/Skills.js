@@ -3,8 +3,8 @@ import uniqid from 'uniqid';
 import NewSectionSkill from './NewSectionSkill';
 
 class Skills extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.handleChange = this.handleChange.bind(this);
         this.deleteSection = this.deleteSection.bind(this);
@@ -71,11 +71,12 @@ class Skills extends Component{
     
     render () {
         const { skillList } = this.state;
+        const { isEdit } = this.props;
 
         return (
         <div id='skillsContainer'>
             <div id='skillsHeader'>Skills</div>
-            <NewSectionSkill skillList={skillList} deleteSection={this.deleteSection}/>
+            <NewSectionSkill isEdit={isEdit} skillList={skillList} deleteSection={this.deleteSection}/>
             <form id='skillForm' onSubmit={this.onSubmitForm} className={this.state.formIsHidden ? 'hide':'skillForm'}>
                 {/* skill name */}
                 <div className='skillFormDetail'>

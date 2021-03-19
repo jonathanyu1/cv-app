@@ -1,7 +1,7 @@
 import React from 'react'
 
 const NewSectionExp = (props) =>{
-    const {sectionList} = props;
+    const {sectionList, isEdit} = props;
 
     return (
         <div id='sectionListContainer'>
@@ -15,7 +15,10 @@ const NewSectionExp = (props) =>{
                         </div>
                         <div className='sectionRight'>
                             <div className='sectionDate'>{section.fromDate} - {section.toDate}</div>
-                            <button className='btnDeleteSection' onClick={()=> props.deleteSection(section.id)}>
+                            {/* <button className='btnDeleteSection' onClick={()=> props.deleteSection(section.id)}>
+                                <span className="material-icons">clear</span>
+                            </button> */}
+                            <button className={isEdit ? 'btnDeleteSection':'hideVisibility'} onClick={()=> props.deleteSection(section.id)}>
                                 <span className="material-icons">clear</span>
                             </button>
                         </div>

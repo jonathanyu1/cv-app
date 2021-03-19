@@ -3,8 +3,8 @@ import uniqid from 'uniqid';
 import NewSectionExp from './NewSectionExp';
 
 class Experience extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.handleChange = this.handleChange.bind(this);
         this.deleteSection = this.deleteSection.bind(this);
@@ -81,11 +81,12 @@ class Experience extends Component{
 
       render() {
         const { sectionList } = this.state;
+        const { isEdit } = this.props;
 
         return (
         <div id='expContainer'>
             <div id='expHeader'>Experience</div>
-            <NewSectionExp sectionList={sectionList} deleteSection={this.deleteSection}/>
+            <NewSectionExp isEdit={isEdit} sectionList={sectionList} deleteSection={this.deleteSection}/>
             <form id='expForm' onSubmit={this.onSubmitForm} className={this.state.formIsHidden ? 'hide':'expForm'}>
                 {/* job */}
                 <div className='expFormDetail'>

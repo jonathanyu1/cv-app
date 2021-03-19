@@ -2,6 +2,11 @@
 .hide{
     display: none;
 }
+
+.hideVisibility{
+    visibility: hidden;
+}
+
 /* whole CV container */
 #cvContainer{
     width: 80%;

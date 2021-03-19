@@ -3,8 +3,8 @@ import uniqid from 'uniqid';
 import NewSection from './NewSection';
 
 class Education extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         // this.newEducation = this.newEducation.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -88,11 +88,12 @@ class Education extends Component{
     
     render() {
         const { sectionList } = this.state;
+        const { isEdit } = this.props;
 
         return (
         <div id='educationContainer'>
             <div id='educationHeader'>Education</div>
-            <NewSection sectionList={sectionList} deleteSection={this.deleteSection}/>
+            <NewSection sectionList={sectionList} deleteSection={this.deleteSection} isEdit={isEdit}/>
             <form id='educationForm' onSubmit={this.onSubmitForm} className={this.state.formIsHidden ? 'hide':'educationForm'}>
                 {/* school */}
                 <div className='eduFormDetail'>
