@@ -48,7 +48,10 @@ class App extends Component {
 
     return (
       <div id='entireContainer'>
-        <div id='header'>
+        <div id='headerContainer'>
+          <div id='header'>
+          <span className="material-icons">assignment</span>
+            C.V. Builder</div>
           <button id='btnMode' onClick={this.changeMode}>{this.state.isEdit ? 'preview':'edit'}</button>
         </div>
         <div id='cvContainer'>

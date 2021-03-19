@@ -1,3 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    /* font-family: 'EB Garamond', serif; */
+    font-family: 'Roboto', sans-serif;
+    background-color: #727477;
+}
 
 .hide{
     display: none;
@@ -11,19 +21,69 @@
 #cvContainer{
     width: 80%;
     margin: 0 auto;
+    background-color: white;
+    border: outset;
 }
+
+/* header container */
+
+#headerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    margin: 20px;
+    color: white;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#headerContainer span{
+    margin-right: 5px;
+    font-size: 50px;
+    
+}
+
+#btnMode{
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+
+}
+
 
 /* General Info */ 
 
 #generalInfoContainer{
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    
+    margin: 20px 20px;
 }
+
+#generalInfoLeft{
+    font-size: 50px;
+}
+
 
 #generalInfoRight{
     /* text-align: right; */
+    font-size: 20px;
+}
+
+#generalInfoRight span{
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+#generalInfoRight input{
+    font-size: 20px;
+    max-width: 100px;
 }
 
 .generalInfoContainer{
