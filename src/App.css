@@ -89,7 +89,7 @@ body{
 }
 
 #generalInfoRight label{
-    min-width: 50px;
+    min-width: 75px;
     display: inline-block;
     min-height: 20px;
 }
@@ -101,7 +101,7 @@ body{
 
 #generalInfoRight input{
     font-size: 20px;
-    max-width: 100px;
+    max-width: 125px;
 }
 
 .generalInfoRightDetails{
@@ -227,6 +227,14 @@ body{
 .btnNewSection{
     vertical-align: middle;
     margin-top: 10px;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.btnNewSection span{
+    font-size: 20px;
+    margin-right: 5px;
 }
 
 .btnDeleteSection{
